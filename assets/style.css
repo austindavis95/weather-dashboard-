@@ -1,0 +1,69 @@
+header {
+    margin: 15px;
+    padding: 20px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #466fbe, #21255b);
+    color: #ffffff;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 70px;
+}
+
+.city-selection form {
+    display: block;
+    color: black;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.city-selection form input {
+    width: 100%;
+}
+
+.city-selection form button {
+    color: #ffffff;
+    background-color: #66a2e3;
+    appearance: none;
+    border: 0;
+}
+
+.city-selection form button:hover {
+    color: #ffffff;
+    background-color: #5591d4;
+}
+
+.city-selection button {
+    color: black;
+    background-color: #b7b7b7;
+    text-align: center;
+    width: 100%;
+    margin: 10px auto 0;
+}
+
+.city-selection button:hover {
+    background-color: #aaa;
+}
+
+#current-weather {
+    border: 1px solid black ;
+    padding: 5px;
+}
+
+.five-day-forecast {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.five-day-forecast > div {
+   justify-content: space-between;
+}
+
+.five-day-forecast > div > div {
+    margin: 5px;
+    background-color: #374659;
+    color: #ffffff;
+    
+}
