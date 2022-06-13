@@ -19,15 +19,22 @@ header h1 {
     border-bottom: 1px solid #444;
 }
 
-.city-selection form input {
+.city-selection input {
     width: 100%;
 }
 
-.city-selection form button {
+.city-selection button {
     color: #ffffff;
     background-color: #66a2e3;
     appearance: none;
     border: 0;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.city-selection button + hr{
+    border-top: 1px solid black;
+    margin: 0;
 }
 
 .city-selection form button:hover {
@@ -35,12 +42,10 @@ header h1 {
     background-color: #5591d4;
 }
 
-.city-selection button {
+.city-selection button.city-history {
     color: black;
     background-color: #b7b7b7;
     text-align: center;
-    width: 100%;
-    margin: 10px auto 0;
 }
 
 .city-selection button:hover {
@@ -52,18 +57,53 @@ header h1 {
     padding: 5px;
 }
 
-.five-day-forecast {
+#current-weather #uv-index {
+    color: white;
+    padding: 3px 5px;
+    border-radius: .25rem;
+}
+
+#current-weather #uv-index.green {
+    background-color: green;
+}
+
+#current-weather #uv-index.yellow {
+    background-color: gold;
+}
+
+#current-weather #uv-index.orange {
+    background-color: orange;
+}
+
+#current-weather #uv-index.red {
+    background-color: red;
+}
+
+#five-day-forecast {
     margin-top: 10px;
     text-align: left;
+    justify-content: space-between;
 }
 
-.five-day-forecast > div {
-   justify-content: space-between;
-}
-
-.five-day-forecast > div > div {
-    margin: 5px;
+#five-day-forecast > div {
+    margin: 0 10px 0 0;
     background-color: #374659;
     color: #ffffff;
-    
+    flex: 1;
+}
+
+#five-day-forecast > div + div {
+    margin: 0 10px;
+    background-color: #374659;
+    color: #ffffff;
+    flex: 1;
+}
+
+#five-day-forecast .weather-icon img {
+    height: 50px;
+    width: auto;
+}
+
+#five-day-forecast .date {
+    margin: .5rem 0;
 }

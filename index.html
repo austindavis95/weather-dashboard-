@@ -1,105 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        
+        <title>Weather Dashboard</title>
 
-		
-        <link
-          rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
-
-
-
-      <!-- CSS Styles -->
 		<link rel="stylesheet" href="assets/style.css" />
-      <title>Weather Dashboard</title>
 	</head>
-
 	<body>
 		<header>
           <h1>Weather Dashboard</h1>
         </header>
-		
         <main>
             <div class="container-fluid city-selection">
                 <div class="row">
-                    <div class="col-3">
+                    <div id="cities" class="col-3">
                         <h3>Search for a City:</h3>
-                            <input
-                            id ="search-city"
-                            class="form-control search-city"
-                            type="text"
-                           name="search-city"
-                           />
-                            <button type="submit" class="btn">Search</button>
-                        
-                        <button class="btn d-block">Austin</button>
-                        <button class="btn d-block">2</button>
-                        <button class="btn d-block">3</button>
-                        <button class="btn d-block">4</button>
-                        <button class="btn d-block">5</button>
-                        <button class="btn d-block">6</button>
-                        <button class="btn d-block">7</button>
-                        <button class="btn d-block">8</button>
+                        <input id="search-city" class="form-control search-city" type="text" name="search-city" placeholder="Search City..."/>
+                        <button type="submit" class="btn">Search</button>
+                        <hr>
                     </div>
                     <div class="col-9">
                         <div id="current-weather">
-                            <h3 class ="sub-title"><span id = "repo-search-term"></span></h3>
-                            <p><img id ="current-icon" class = "weather-icon" /></p>
-                            <p>Temp:<span id = "today-temp"></span></p>
-                            <p> Wind:<span id = "today-wind"></span></p>
-                            <p>Humidity:<span id = "today-humidity"></span></p>
-                            <p>UV Index: <span id = "uv-index"></span></p>
+                            <h3 class="sub-title"><span id="repo-search-term"></span></h3>
+                            <p><img id="current-icon" class="weather-icon" /></p>
+                            <p>Temp:<span id="today-temp"></span></p>
+                            <p>Wind:<span id="today-wind"></span></p>
+                            <p>Humidity:<span id="today-humidity"></span></p>
+                            <p>UV Index: <span id="uv-index"></span></p>
                         </div>
                         <div class="container">
                             <h3>5-Day Forecast</h3>
                             <div class="row" id="five-day-forecast">
                                 <div id="day1" class="col-auto">
 
-                                    <h3 id = "day-1-date"></h3>
+                                    <h5 class="date"></h5>
                                 
-                                    <p><img class = "weather-icon" id = "icon-1"/></p>
-                                    <p id ="day-1-temp">Temp: </p>
-                                    <p id ="day-1-wind">Wind:6.67 MPH</p>
-                                    <p id ="day-1-humidity">Humidity: 46%</p>
+                                    <p class="weather-icon"><img></p>
+                                    <p id="day-1-temp">Temp: </p>
+                                    <p id="day-1-wind">Wind: </p>
+                                    <p id="day-1-humidity">Humidity: </p>
                                 </div>
                                 <div id="day2" class="col-auto">
-                                    <h3 id = "day-2-date"></h3>
-                                    <p><img class = "weather-icon" id = "icon-2"/></p>
+                                    <h5 class="date"></h5>
+                                    <p class="weather-icon"><img></p>
                                     
-                                    <p id="day-2-temp">Temp: 74.01&deg;F</p>
-                                    <p id ="day-2-wind">Wind:6.67 MPH</p>
-                                    <p id ="day-2-humidity">Humidity: 46%</p>
+                                    <p id="day-2-temp">Temp: </p>
+                                    <p id="day-2-wind">Wind: </p>
+                                    <p id="day-2-humidity">Humidity: </p>
                                 </div>
                                 <div id="day3" class="col-auto">
-                                    <h3 id = "day-3-date"></h3>
-                                    <p><img class = "weather-icon" id = "icon-3"/></p>
+                                    <h5 class="date"></h5>
+                                    <p class="weather-icon"><img></p>
                                     
-                                    <p id ="day-3-temp">Temp: 74.01&deg;F</p>
-                                    <p id ="day-3-wind">Wind:6.67 MPH</p>
-                                    <p id ="day-3-humidity">Humidity: 46%</p>
+                                    <p id="day-3-temp">Temp: </p>
+                                    <p id="day-3-wind">Wind: </p>
+                                    <p id="day-3-humidity">Humidity: </p>
                                 </div>
                                 <div id="day4" class="col-auto">
-                                    <h3 id = "day-4-date"></h3>
-                                    <p><img class = "weather-icon" id = "icon-4"/></p>
+                                    <h5 class="date"></h5>
+                                    <p class="weather-icon"><img></p>
                                     
-                                    <p id ="day-4-temp">Temp: 74.01&deg;F</p>
-                                    <p id ="day-4-wind">Wind:6.67 MPH</p>
-                                    <p id ="day-4-humidity">Humidity: 46%</p>
+                                    <p id="day-4-temp">Temp: </p>
+                                    <p id="day-4-wind">Wind: </p>
+                                    <p id="day-4-humidity">Humidity: </p>
                                 </div>
                                 <div id="day5" class="col-auto">
-                                    <h3 id = "day-5-date"></h3>
-                                    <p><img class = "weather-icon" id = "icon-5"/></p>
+                                    <h5 class="date"></h5>
+                                    <p class="weather-icon"><img></p>
                                    
-                                    <p id ="day-5-temp">Temp: 74.01&deg;F</p>
-                                    <p id ="day-5-wind">Wind:6.67 MPH</p>
-                                    <p id ="day-5-humidity">Humidity: </p>
-                                </div>
+                                    <p id="day-5-temp">Temp: </p>
+                                    <p id="day-5-wind">Wind: </p>
+                                    <p id="day-5-humidity">Humidity: </p>
                             </div>
                         </div>
                     </div>
