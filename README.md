@@ -6,9 +6,8 @@
 github - (https://github.com/austindavis95)
 
 ##Project Links:
+github: https://github.com/austindavis95/weather-dashboard-
 
-github: weather-dashboard; 
-Live URL:
 
 ## work-day-schedule
 
@@ -20,6 +19,7 @@ SO THAT I can plan a trip accordingly
 
 ##Introduction
 
+i this project i used my new found skills with apis to create a complete interactive weather dashboard. Use this app to view weatehr anywhere in the country! You will be able to see not just the temperature; bu the wind speed, humidity and UV index as well. Use This app to plan your perfect nature day!
 
 
 
